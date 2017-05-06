@@ -1,6 +1,9 @@
 # Destiny Game
 CIS 27 Final Project</br>
-Designed to be using OpenGL and other utility libraries</br></br>
+Designed to be using OpenGL and other utility libraries</br>
+Looks like classic minesweeper but quite different...</br>
+You gotta WALK THROUGH the mine field!</br>
+(Sry I put a little troll face for you...</br></br>
 <img src="https://ccperalta-my.sharepoint.com/personal/10889537_cc_peralta_edu/_layouts/15/guestaccess.aspx?docid=1ced4ce86ae394380906411b962278f32&authkey=AbH65UZNrwl39E6TsX7ArCo" width="500" height="500"></img>
 
 ## What's new
