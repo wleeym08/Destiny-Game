@@ -266,8 +266,6 @@ int runGame(int mode) {
 	/* Variables for audio */
 	ALuint bgmBuffer;
 	ALuint bgmSource;
-	ALfloat bgmVolume;
-	ALuint bgmLoop;
 	ALuint sfxMoveBuffer;
 	ALuint sfxMoveSource;
 	ALuint sfxUndoBuffer;
