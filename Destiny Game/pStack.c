@@ -6,6 +6,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "pStack.h"
 
 PStack** newPStack() {

@@ -6,6 +6,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "pNode.h"
 
 P* newPoint(int x, int y) {

@@ -6,6 +6,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "boardInfo.h"
 #include "pQueue.h"
 #include "path.h"
