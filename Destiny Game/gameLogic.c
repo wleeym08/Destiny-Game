@@ -5,6 +5,7 @@
  * Last Update:  2017/05/05
  */
 
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -17,6 +18,7 @@
 #include "gameLogic.h"
 #include "graphic.h"
 #include "path.h"
+*/
 
 int** initStateAry(int mode) {
 	int row;
