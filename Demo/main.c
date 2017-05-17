@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
 	printf("+---------------------------+\n"
 		"|    CIS 27 Final Project   |\n"
 		"|       Destiny Game        |\n"
-		"|         ver 0.0.2         |\n"
+		"|         ver 0.0.1         |\n"
 		"|    Author: Zhiying Li     |\n"
 		"|    GitHub: winghearn      |\n"
 		"+---------------------------+\n"

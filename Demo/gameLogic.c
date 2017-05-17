@@ -10,7 +10,7 @@
 #include <time.h>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-//#include "alutil.h"
+#include "alutil.h"
 #include "iStack.h"
 #include "pStack.h"
 #include "boardInfo.h"
@@ -264,6 +264,7 @@ int runGame(int mode) {
 	GLuint loseVertexAry;
 
 	/* Variables for audio */
+    /*
 	ALuint bgmBuffer;
 	ALuint bgmSource;
 	ALuint sfxMoveBuffer;
@@ -274,7 +275,7 @@ int runGame(int mode) {
 	ALuint sfxMineSource;
 	ALuint sfxWinBuffer;
 	ALuint sfxWinSource;
-    
+    */
 	/* Stack */
 	IStack** stateStack = newIStack();
 	PStack** moveStack = newPStack();
@@ -377,8 +378,11 @@ int runGame(int mode) {
 	pathAry = NULL;
 
 	/* Initialize OpenAL */
-	if (!alInit())
+    /*
+	if (!alInit()) {
 		fprintf(stderr, "ERROR: CANNOT INITIALIZE OPENAL\n");
+		return 1;
+	}
 
 	bgmBuffer = bufferWavData("audio/th15_stage3.wav");
 	bgmSource = createNormalSource(bgmBuffer);
@@ -396,6 +400,7 @@ int runGame(int mode) {
 	sfxWinBuffer = bufferWavData("audio/shineon.wav");
 	sfxWinSource = createNormalSource(sfxWinBuffer);
 	alSourcef(sfxWinSource, AL_GAIN, 0.25f);
+	*/
 
 	/* Initialize GLFW */
 	if (!glfwInit()) {
@@ -403,8 +408,8 @@ int runGame(int mode) {
 		return 1;
 	}
 
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
@@ -631,10 +636,10 @@ int runGame(int mode) {
 					glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(GLfloat), (GLvoid*)(2 * sizeof(GLfloat)));
 
 					if (*(*(mapAry + currentY) + currentX) == '#') {
-						#pragma omp critical
-						{
-							alSourcePlay(sfxMineSource);
-						}
+						//#pragma omp critical
+						//{
+						//	alSourcePlay(sfxMineSource);
+						//}
 						life--;
 						if (life == 0) {
 							active = 0;
@@ -642,16 +647,16 @@ int runGame(int mode) {
 						}
 					}
 					else {
-						#pragma omp critical 
-						{
-							alSourcePlay(sfxMoveSource);
-						}
+						//#pragma omp critical 
+						//{
+						//	alSourcePlay(sfxMoveSource);
+						//}
 
 						if (*(*(mapAry + currentY) + currentX) == 'G') {
-							#pragma omp critical
-							{
-								alSourcePlay(sfxWinSource);
-							}
+							//#pragma omp critical
+							//{
+						//		alSourcePlay(sfxWinSource);
+							//}
 							active = 0;
 							flag = 1;
 						}
@@ -689,10 +694,10 @@ int runGame(int mode) {
 					glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(GLfloat), (GLvoid*)(2 * sizeof(GLfloat)));
 
 					if (*(*(mapAry + currentY) + currentX) == '#') {
-						#pragma omp critical
-						{
-							alSourcePlay(sfxMineSource);
-						}
+						//#pragma omp critical
+						//{
+						//	alSourcePlay(sfxMineSource);
+						//}
 						life--;
 						if (life == 0) {
 							active = 0;
@@ -700,16 +705,16 @@ int runGame(int mode) {
 						}
 					}
 					else {
-						#pragma omp critical 
-						{
-							alSourcePlay(sfxMoveSource);
-						}
+						//#pragma omp critical 
+						//{
+						//	alSourcePlay(sfxMoveSource);
+						//}
 
 						if (*(*(mapAry + currentY) + currentX) == 'G') {
-							#pragma omp critical
-							{
-								alSourcePlay(sfxWinSource);
-							}
+							//#pragma omp critical
+							//{
+							//	alSourcePlay(sfxWinSource);
+							//}
 							active = 0;
 							flag = 1;
 						}
@@ -747,10 +752,10 @@ int runGame(int mode) {
 					glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(GLfloat), (GLvoid*)(2 * sizeof(GLfloat)));
 
 					if (*(*(mapAry + currentY) + currentX) == '#') {
-						#pragma omp critical
-						{
-							alSourcePlay(sfxMineSource);
-						}
+					//	#pragma omp critical
+					//	{
+					//		alSourcePlay(sfxMineSource);
+					//	}
 						life--;
 						if (life == 0) {
 							active = 0;
@@ -758,16 +763,16 @@ int runGame(int mode) {
 						}
 					}
 					else {
-						#pragma omp critical 
-						{
-							alSourcePlay(sfxMoveSource);
-						}
+						//#pragma omp critical 
+						//{
+						//	alSourcePlay(sfxMoveSource);
+						//}
 
 						if (*(*(mapAry + currentY) + currentX) == 'G') {
-							#pragma omp critical
-							{
-								alSourcePlay(sfxWinSource);
-							}
+							//#pragma omp critical
+							//{
+						//		alSourcePlay(sfxWinSource);
+							//}
 							active = 0;
 							flag = 1;
 						}
@@ -805,10 +810,10 @@ int runGame(int mode) {
 					glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(GLfloat), (GLvoid*)(2 * sizeof(GLfloat)));
 
 					if (*(*(mapAry + currentY) + currentX) == '#') {
-						#pragma omp critical
-						{
-							alSourcePlay(sfxMineSource);
-						}
+						//#pragma omp critical
+						//{
+						//	alSourcePlay(sfxMineSource);
+						//}
 						life--;
 						if (life == 0) {
 							active = 0;
@@ -816,16 +821,16 @@ int runGame(int mode) {
 						}
 					}
 					else {
-						#pragma omp critical 
-						{
-							alSourcePlay(sfxMoveSource);
-						}
+						//#pragma omp critical 
+						//{
+						//	alSourcePlay(sfxMoveSource);
+						//}
 
 						if (*(*(mapAry + currentY) + currentX) == 'G') {
-							#pragma omp critical
-							{
-								alSourcePlay(sfxWinSource);
-							}
+							//#pragma omp critical
+							//{
+							///	alSourcePlay(sfxWinSource);
+							//}
 							active = 0;
 							flag = 1;
 						}
@@ -835,19 +840,19 @@ int runGame(int mode) {
 
 			state_O = glfwGetKey(window, GLFW_KEY_O);
 			if (state_O == GLFW_PRESS) {
-				#pragma omp critical
-				{
-					alSourcePlay(bgmSource);
-				}
+			//	#pragma omp critical
+			//	{
+			//		alSourcePlay(bgmSource);
+			//	}
 			}
 
 
 			state_P = glfwGetKey(window, GLFW_KEY_P);
 			if (state_P == GLFW_PRESS) {
-				#pragma omp critical
-				{
-					alSourcePause(bgmSource);
-				}
+				//#pragma omp critical
+				//{
+				//	alSourcePause(bgmSource);
+				//}
 			}
 
 			state_Q = glfwGetKey(window, GLFW_KEY_Q);
@@ -881,10 +886,10 @@ int runGame(int mode) {
 
 			state_R = glfwGetKey(window, GLFW_KEY_R);
 			if (state_R == GLFW_PRESS) {
-				#pragma omp critical
-				{
-					alSourcePlay(sfxUndoSource);
-				}
+				//#pragma omp critical
+				//{
+				//	alSourcePlay(sfxUndoSource);
+				//}
 
 				if (peek(moveStack) != NULL) {
 					*(*(stateAry + currentY) + currentX) = pop_i(stateStack);
@@ -920,6 +925,7 @@ int runGame(int mode) {
 	}
 
 	/* Clean up */
+    /*
 	alSourceStop(bgmSource);
 	alDeleteSources(1, &bgmSource);
 	alDeleteBuffers(1, &bgmBuffer);
@@ -936,6 +942,7 @@ int runGame(int mode) {
 	alDeleteSources(1, &sfxWinSource);
 	alDeleteBuffers(1, &sfxWinBuffer);
 	alExit();
+    */
 
 	for (int i = 0; i < row; i++) {
 		for (int j = 0; j < column; j++) {
