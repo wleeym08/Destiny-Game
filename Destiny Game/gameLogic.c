@@ -5,7 +5,7 @@
  * Last Update:  2017/05/05
  */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <GL/glew.h>
