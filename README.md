@@ -8,7 +8,8 @@ You gotta WALK THROUGH the mine field!</br>
 
 ## What's new
 Ver 0.02 (2017/05/16)</br>
--- Fix error produced by misplacing DLL files</br></br>
+-- Fix error produced by misplacing DLL files</br>
+-- Make some changes to the project</br></br>
 Ver 0.01 (2017/05/05)</br>
 -- Update menu</br>
 ## Download
