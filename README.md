@@ -12,6 +12,9 @@ Ver 0.01 (2017/05/05)</br>
 ## Download
 Dropbox:</br>
 https://www.dropbox.com/sh/kruvl6t840t7jif/AACI7OaR0cOYfwfDvtmHxzyza?dl=0
+## Issues
+If cannot initialize audio device, please download and install latest version of OpenAL</br>
+https://openal.org/downloads/
 ## What need to be improved
 Tried to use FreeType but found tricky to work with shaders and textures.</br>
 May fix this later...</br>
