@@ -15,15 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pNode.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pStack.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="gameLogic.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,80 +27,49 @@
     <ClCompile Include="iStack.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="path.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pNode.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pQueue.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="alutil.c">
+    <ClCompile Include="pStack.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pStack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="boardInfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="iStack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="iNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="graphic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="gameLogic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="graphic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="path.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="alutil.h">
+    <ClInclude Include="pStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Media Include="audio\MINE.wav">
-      <Filter>Resource Files</Filter>
-    </Media>
-    <Media Include="audio\SFX_MOVE.wav">
-      <Filter>Resource Files</Filter>
-    </Media>
-    <Media Include="audio\SFX_UNDO.wav">
-      <Filter>Resource Files</Filter>
-    </Media>
-    <Media Include="audio\shineon.wav">
-      <Filter>Resource Files</Filter>
-    </Media>
-    <Media Include="audio\th15_stage3.wav">
-      <Filter>Resource Files</Filter>
-    </Media>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="img\ebase.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="img\lose.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="img\PLAYER_TROLL.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="img\texture.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="img\win.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
   </ItemGroup>
 </Project>
