@@ -18,6 +18,7 @@
 #include "graphic.h"
 #include "path.h"
 
+/*
 int** initStateAry(int mode) {
 	int row;
 	int column;
@@ -43,7 +44,7 @@ int** initStateAry(int mode) {
 		column = COLUMN_NUMBER_LUNATIC;
 		break;
 	}
-
+*/
 	stateAry = (int**)malloc(row * sizeof(int*));
 	for (int i = 0; i < row; i++) {
 		*(stateAry + i) = (int*)malloc((column * sizeof(int)));
