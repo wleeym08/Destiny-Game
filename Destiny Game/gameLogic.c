@@ -10,7 +10,7 @@
 #include <time.h>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include "alutil.h"
+//#include "alutil.h"
 #include "iStack.h"
 #include "pStack.h"
 #include "boardInfo.h"
