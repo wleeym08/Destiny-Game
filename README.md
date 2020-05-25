@@ -4,7 +4,7 @@ Looks like classic minesweeper but quite different...</br>
 You gotta WALK THROUGH the mine field!</br>
 (Sry I put a little troll face for you...</br></br>
 
-![alt text](https://raw.githubusercontent.com/wleeym08/Destiny-Game/v0.1.0/destinygame.jpg)
+![playground](https://raw.githubusercontent.com/wleeym08/Destiny-Game/master/destinygame.jpg)
 
 ## What's new
 Ver 0.10 (2018/03/19)</br>
